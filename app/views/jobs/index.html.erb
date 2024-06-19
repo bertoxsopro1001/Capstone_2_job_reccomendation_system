@@ -1,0 +1,25 @@
+<!-- app/views/jobs/index.html.erb -->
+
+<%= form_with url: recommend_jobs_path, method: :post, local: false do |form| %>
+  <div class="field">
+    <%= form.label :personality %>
+    <%= form.text_field :personality %>
+  </div>
+
+  <div class="field">
+    <%= form.label :work_experience %>
+    <%= form.text_field :work_experience %>
+  </div>
+
+  <div class="field">
+    <%= form.label :work_hours %>
+    <%= form.text_field :work_hours %>
+  </div>
+
+  <div class="field">
+    <%= form.label :salary %>
+    <%= form.text_field :salary %>
+  </div>
+
+  <%= form.submit 'Recommend Jobs' %>
+<% end %>
